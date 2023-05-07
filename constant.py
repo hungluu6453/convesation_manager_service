@@ -17,3 +17,12 @@ ENTITY_LIST = [
     #' subject',
     # 'year',
 ]
+
+STATE_LIST = [
+    'listen',
+    'ask',
+    'answer',
+    'introduce',
+    'greet',
+    'unknow',
+]
