@@ -25,14 +25,14 @@ manager_list = {}
 
 class Request_Item(BaseModel):
     conversation_id: str
-    intent: str
+    intent: str = None
     entity_dict: Dict[str, List]
     utterance: str
 
 
 class Response_Item(BaseModel):
     action: str
-    response: str
+    response: List
     role: str = None
     question: str = None
 
@@ -49,20 +49,20 @@ def conversation_update(Request: Request_Item):
         manager_list[conversation_id] = Conversation_Manager(conversation_id)
     manager = manager_list[conversation_id]
 
-    manager.transit(intent, entity_dict, utterance)
-    response = manager.act()
+    response = manager(intent, entity_dict, utterance)
 
     logging.info('Intent: %s', intent)
     logging.info('Entity: %s', entity_dict)
     logging.info('Utterance: %s', utterance)
-    logging.info('Role: %s', manager.role_type)
-    logging.info('Action: %s', manager.current_action)
+    logging.info('Role: %s', manager.role)
+    logging.info('Action: %s', manager.actions)
     logging.info('Question: %s', manager.question)
+    logging.info('Response: %s', response)
 
     return Response_Item(
-        action=manager.current_action,
+        action=manager.actions[-1],
         response=response,
-        role=manager.role_type,
+        role=manager.role,
         question=manager.question
     )
 

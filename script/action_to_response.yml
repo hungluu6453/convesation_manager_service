@@ -1,0 +1,22 @@
+# Map action with a random fix responses
+
+greeting:
+- "Xin chào"
+
+introducing:
+- "Mình là hệ thống Chatbot hỗ trợ sinh viên, học viên các vấn đề thắc mắc đến quy định. Bạn chỉ cần hỏi mình, còn những quy định dài dòng thì cứ để mình lo."
+
+asking:
+- "Bạn muốn hỏi cho cấp bậc đào tạo nào nhỉ? (sinh viên, thạc sĩ, nghiên cứu sinh, tiến sĩ)"
+
+wondering:
+- "Xin lỗi nha, mình chưa hiểu ý bạn lắm. Bạn có thể để lại lời góp ý để giúp mình thông minh hơn đó."
+
+answering:
+- "Câu trả lời của bạn liên quan đến [{}] đây:"
+
+roger:
+- "Được rồi, mình sẽ cập nhật thông tin này vào hệ thống nha"
+
+please_wait:
+- "Bạn giúp mình trả lời câu hỏi trên trước nha"

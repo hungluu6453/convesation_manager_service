@@ -1,0 +1,23 @@
+action_list:
+- "asking"
+- "answering"
+- "introducing"
+- "greeting"
+- "wondering"
+
+intent_list:
+- "greeting"
+- "policy"
+- "answer"
+- "greeting"
+- "confirm"
+- "disagree"
+- "chitchat"
+
+state_list:
+- "listen"
+- "ask"
+- "answer"
+- "introduce"
+- "greet"
+- "unknow"

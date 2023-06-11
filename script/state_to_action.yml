@@ -1,0 +1,38 @@
+# Map state to action
+notAsking:
+  listen:
+  - "introducing"
+  ask:
+  - "asking"
+  answer:
+  - "answering"
+  introduce:
+  - "introducing"
+  greet:
+  - "greeting"
+  unknow:
+  - "wondering"
+  update:
+  - "roger"
+  
+isAsking:
+  listen:
+  - "asking"
+  ask:
+  - "asking"
+  introduce:
+  - "introducing"
+  - "asking"
+  greet:
+  - "greeting"
+  - "asking"
+  unknow:
+  - "wondering"
+  - "asking"
+  answer:
+  - "answering"
+  update:
+  - "roger"
+  processing:
+  - "please_wait"
+  - "asking"
